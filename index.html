@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamal Mohammed | PhD Candidate in Computer Science</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #2c3e50;
@@ -212,85 +212,27 @@
         .about-text p {
             margin-bottom: 20px;
             font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        .about-details {
-            margin-top: 30px;
-        }
-
-        .detail-item {
-            margin-bottom: 15px;
-            display: flex;
-        }
-
-        .detail-item strong {
-            min-width: 120px;
-            color: var(--primary);
-        }
-
-        /* Experience & Education */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: var(--secondary);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-        }
-
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: white;
-            border: 4px solid var(--secondary);
-            border-radius: 50%;
-            top: 15px;
-            right: -13px;
-            z-index: 1;
-        }
-
-        .left {
-            left: 0;
-        }
-
-        .right {
-            left: 50%;
-        }
-
-        .timeline-content {
-            padding: 20px;
-            background-color: var(--card-bg);
-            border-radius: 6px;
+        .story-narration {
+            font-family: 'Merriweather', serif;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #444;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .timeline-content h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
+        .story-narration p {
+            margin-bottom: 25px;
         }
 
-        .timeline-content .date {
+        .highlight {
             color: var(--secondary);
             font-weight: 600;
-            margin-bottom: 10px;
-            display: block;
         }
 
         /* Skills Section */
@@ -298,6 +240,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
+            margin-top: 50px;
         }
 
         .skill-category {
@@ -378,6 +321,50 @@
             font-size: 0.9rem;
         }
 
+        /* Research Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            margin-bottom: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .project-tag {
+            background: var(--secondary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
         /* Contact Section */
         .contact-container {
             display: grid;
@@ -446,24 +433,6 @@
             .hero p {
                 font-size: 1.2rem;
             }
-            
-            .timeline::after {
-                left: 31px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item::after {
-                left: 21px;
-            }
-            
-            .left, .right {
-                left: 0;
-            }
         }
 
         @media screen and (max-width: 768px) {
@@ -483,6 +452,10 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .story-narration {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -494,10 +467,8 @@
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#publications">Publications</a></li>
+                    <li><a href="#research">Research</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -520,104 +491,22 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Me</h2>
+                <h2>My Journey</h2>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Profile</h3>
-                    <p>PhD candidate with strong expertise in deep learning, PyTorch/TensorFlow, and algorithm design for time series. Experienced in deploying ML solutions and integrating models into systems. Proven track record in research publications, project ownership, and interdisciplinary collaboration.</p>
-                    
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <strong>Email:</strong> mjamal@ifi.uzh.ch
-                        </div>
-                        <div class="detail-item">
-                            <strong>Location:</strong> Binzmühlestrasse 14 (BIN 2 E 11), Zurich, CH-8050
-                        </div>
-                        <div class="detail-item">
-                            <strong>Focus:</strong> Time series predictability, Information theory
-                        </div>
-                        <div class="detail-item">
-                            <strong>Tools:</strong> Deep learning, algorithmic modeling
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="15175868_orig.jpg" alt="Jamal Mohammed" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                </div>
+            
+            <div class="story-narration">
+                <p>My journey in computer science began at Politecnico di Torino, where I earned my Bachelor's degree in Computer Engineering. It was here that I developed a strong foundation in computational thinking and problem-solving. My passion for the field grew, leading me to pursue a Master's degree in Computer Science at the Free University of Bolzano, where I graduated with top honors (110/110, top 1%).</p>
+                
+                <p>Currently, I'm in the final stages of my <span class="highlight">Ph.D. in Computer Science at the University of Zurich</span>, focusing on time series predictability and information theory. My research combines deep learning with algorithmic modeling to push the boundaries of what's possible in forecasting and predictive analytics.</p>
+                
+                <p>My professional experience includes working as a <span class="highlight">Data Analyst at Durst Phototechnik AG</span>, where I developed RNN and Bayesian ML models for anomaly detection. I collaborated closely with engineering teams to integrate these predictive models into maintenance pipelines, gaining valuable experience in deploying machine learning solutions in real-world scenarios.</p>
+                
+                <p>Throughout my academic and professional journey, I've developed expertise in <span class="highlight">Python, PyTorch, TensorFlow, and various ML techniques</span> including transformers and neural forecasting. I've also served as a Teaching Assistant for Database Systems at the University of Zurich and have had the privilege of supervising several MSc and BSc theses.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" style="background-color: #f8f9fa;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Education</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Ph.D. Computer Science</h3>
-                        <span class="date">Nov 2020 – Aug 2025</span>
-                        <p>University of Zurich</p>
-                        <p>Focus: Time series predictability, Information theory; tools: deep learning, algorithmic modeling.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>M.Sc. Computer Science</h3>
-                        <span class="date">Sept 2018 – Sept 2020</span>
-                        <p>Free University of Bolzano</p>
-                        <p>Voto 110/110, Top 1%</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>B.Sc. Computer Engineering</h3>
-                        <span class="date">Sept 2014 – Mar 2018</span>
-                        <p>Politecnico di Torino</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-title">
-                <h2>Experience</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Data Analyst</h3>
-                        <span class="date">Duration not specified</span>
-                        <p>Durst Phototechnik AG, Italy</p>
-                        <p>Built RNN and Bayesian ML models for anomaly detection; collaborated with engineers to integrate forecasts into maintenance pipelines.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>Teaching Assistant – Database Systems</h3>
-                        <span class="date">Feb 2022 – Jul 2024</span>
-                        <p>University of Zurich</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" style="background-color: #f8f9fa;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Technical Skills</h2>
-            </div>
+            
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Languages</h3>
+                    <h3>Languages & Frameworks</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Python</span>
@@ -627,37 +516,6 @@
                             <div class="skill-level" style="width: 95%;"></div>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>SQL</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>C</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>MATLAB</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>DL Frameworks</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>PyTorch</span>
@@ -678,16 +536,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>ONNX</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>NumPy</span>
+                            <span>SQL</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-bar">
@@ -697,23 +546,14 @@
                 </div>
                 
                 <div class="skill-category">
-                    <h3>Tools & Techniques</h3>
+                    <h3>ML Techniques</h3>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Git</span>
+                            <span>Time Series Analysis</span>
                             <span>95%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 95%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Docker</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%;"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -734,39 +574,123 @@
                             <div class="skill-level" style="width: 92%;"></div>
                         </div>
                     </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Bayesian Methods</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Git</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Docker</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>ONNX</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JIRA</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Publications Section -->
-    <section id="publications">
+    <section id="publications" class="publications">
         <div class="container">
             <div class="section-title">
-                <h2>Publications & Research</h2>
+                <h2>Publications</h2>
             </div>
             <div class="pub-item">
                 <h3>Quantifying and Estimating the Predictability Upper Bound of Univariate Numeric Time Series</h3>
                 <div class="pub-authors">J. Mohammed, M. H. Böhlen, S. Helmer</div>
                 <span class="pub-conference">SIGKDD 2024</span>
-                <p class="pub-doi">DOI:10.3390/e17042367 (I am the first author)</p>
+                <p class="pub-doi">DOI:10.3390/e17042367 (First Author)</p>
             </div>
             
             <div class="pub-item">
                 <h3>Multi-Horizon Predictability Upper Bound Time Series Forecasting</h3>
                 <div class="pub-authors">J. Mohammed</div>
-                <span class="pub-conference">Under review: AAAI 2026 (I am the sole author of this paper)</span>
+                <span class="pub-conference">Under review: AAAI 2026 (Sole Author)</span>
             </div>
             
             <div class="pub-item">
                 <h3>Efficient Subsequence Matching in Time Series for Entropy Rate Estimation</h3>
                 <div class="pub-authors">J. Mohammed, M. H. Böhlen, S. Helmer</div>
-                <span class="pub-conference">In preparation: SIGMOD 2026 (I am the first author)</span>
+                <span class="pub-conference">In preparation: SIGMOD 2026 (First Author)</span>
             </div>
-            
-            <div class="pub-item">
-                <h3>Entropy-based and Model-Agnostic Forecast Accuracy Bound Toolkit</h3>
-                <p>Implements forecasting pipelines and evaluation metrics.</p>
+        </div>
+    </section>
+
+    <!-- Research Projects Section -->
+    <section id="research">
+        <div class="container">
+            <div class="section-title">
+                <h2>Research Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Entropy-based Forecast Accuracy Bound Toolkit</h3>
+                    <p>A comprehensive toolkit for implementing forecasting pipelines and evaluating prediction accuracy bounds using information theory principles.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">PyTorch</span>
+                        <span class="project-tag">Information Theory</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Time Series Predictability Framework</h3>
+                    <p>Development of model-agnostic frameworks for estimating the upper bounds of predictability in univariate numeric time series.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Deep Learning</span>
+                        <span class="project-tag">TensorFlow</span>
+                        <span class="project-tag">Time Series</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Anomaly Detection in Industrial Systems</h3>
+                    <p>Designed and implemented RNN and Bayesian neural networks for predictive maintenance and anomaly detection in industrial equipment.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">RNN</span>
+                        <span class="project-tag">Bayesian Methods</span>
+                        <span class="project-tag">Anomaly Detection</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
