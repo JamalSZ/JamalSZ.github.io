@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JayZS - Personal Page & GitHub Pages Troubleshooting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #4fc3f7;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --background: #ffffff;
+            --text: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--secondary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-success {
+            background-color: var(--success);
+        }
+        
+        .btn-danger {
+            background-color: var(--danger);
+        }
+        
+        .troubleshooting-container {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        .issue {
+            background-color: white;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .solution {
+            background-color: #f8fff9;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+        
+        .code-block {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .success-check {
+            color: var(--success);
+            margin-right: 10px;
+        }
+        
+        .warning-icon {
+            color: var(--warning);
+            margin-right: 10px;
+        }
+        
+        .error-icon {
+            color: var(--danger);
+            margin-right: 10px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            header {
+                padding: 80px 0 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="profile-img">Replace with your photo</div>
+            <h1>JayZS</h1>
+            <p>Web Developer & Software Engineer</p>
+            <div class="social-links">
+                <a href="https://github.com/JayZS" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#troubleshooting" class="btn btn-success"><i class="fas fa-wrench"></i> GitHub Pages Fix</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>Hello! I'm Jay, a passionate developer with experience in web development, software engineering, and cloud technologies. I'm currently looking for new opportunities in the tech industry.</p>
+            <p>My skills include JavaScript, React, Node.js, Python, and various database technologies. I enjoy solving complex problems and building applications that make a difference.</p>
+            <p>When I'm not coding, you can find me hiking, reading tech blogs, or experimenting with new programming languages and frameworks.</p>
+        </div>
+    </section>
+
+    <!-- Troubleshooting Section -->
+    <section id="troubleshooting">
+        <div class="container">
+            <h2 class="section-title">GitHub Pages 404 Error Fix</h2>
+            <p>If you're seeing a 404 error for your GitHub Pages site (jayzs.github.io), follow these steps to resolve the issue:</p>
+            
+            <div class="troubleshooting-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Check Repository Name</h3>
+                        <p>Ensure your repository is named exactly <strong>jayzs.github.io</strong> (case-sensitive).</p>
+                        <div class="issue">
+                            <p><i class="fas fa-exclamation-triangle error-icon"></i> Repository name is incorrect</p>
+                        </div>
+                        <div class="solution">
+                            <p><i class="fas fa-check-circle success-check"></i> Rename your repository to <strong>jayzs.github.io</strong></p>
+                            <div class="code-block">
+                                # To rename your repository:<br>
+                                # 1. Go to your repository on GitHub<br>
+                                # 2. Click on "Settings"<br>
+                                # 3. Under "Repository name", change it to "jayzs.github.io"<br>
+                                # 4. Click "Rename"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Check Branch Settings</h3>
+                        <p>GitHub Pages needs to be configured to use the correct branch.</p>
+                        <div class="issue">
+                            <p><i class="fas fa-exclamation-triangle error-icon"></i> Wrong branch selected for GitHub Pages</p>
+                        </div>
+                        <div class="solution">
+                            <p><i class="fas fa-check-circle success-check"></i> Set GitHub Pages to use the main branch:</p>
+                            <div class="code-block">
+                                # Configuration steps:<br>
+                                # 1. Go to your repository on GitHub<br>
+                                # 2. Click on "Settings"<br>
+                                # 3. Scroll down to "GitHub Pages" section<br>
+                                # 4. Under "Source", select "main" branch (or "master")<br>
+                                # 5. If you're using a docs folder, select "/docs"<br>
+                                # 6. Click "Save"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Check for index.html</h3>
+                        <p>Your repository must contain an index.html file in the root or selected folder.</p>
+                        <div class="issue">
+                            <p><i class="fas fa-exclamation-triangle error-icon"></i> Missing index.html file</p>
+                        </div>
+                        <div class="solution">
+                            <p><i class="fas fa-check-circle success-check"></i> Add an index.html file to your repository:</p>
+                            <div class="code-block">
+                                # To add index.html:<br>
+                                # 1. Go to your repository on GitHub<br>
+                                # 2. Click "Add file" → "Create new file"<br>
+                                # 3. Name the file "index.html"<br>
+                                # 4. Copy the HTML code from this page<br>
+                                # 5. Scroll down and click "Commit new file"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Wait for Deployment</h3>
+                        <p>GitHub Pages can take a few minutes to deploy your site after changes.</p>
+                        <div class="issue">
+                            <p><i class="fas fa-exclamation-triangle warning-icon"></i> Site not deployed yet</p>
+                        </div>
+                        <div class="solution">
+                            <p><i class="fas fa-check-circle success-check"></i> Wait a few minutes and refresh your page:</p>
+                            <div class="code-block">
+                                # After making changes:<br>
+                                # 1. Wait 1-5 minutes for GitHub to process your changes<br>
+                                # 2. Refresh your browser at https://jayzs.github.io<br>
+                                # 3. If still not working, check the "Settings" → "Pages" section<br>
+                                #    for any error messages
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Check for Build Errors</h3>
+                        <p>If you're using Jekyll or other static site generators, check for build errors.</p>
+                        <div class="issue">
+                            <p><i class="fas fa-exclamation-triangle error-icon"></i> Build errors in GitHub Actions</p>
+                        </div>
+                        <div class="solution">
+                            <p><i class="fas fa-check-circle success-check"></i> Check build status:</p>
+                            <div class="code-block">
+                                # To check for build errors:<br>
+                                # 1. Go to your repository on GitHub<br>
+                                # 2. Click on "Actions" tab<br>
+                                # 3. Look for any failed workflows<br>
+                                # 4. If using a custom static generator, ensure it's supported by GitHub Pages
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <h3>Still having issues?</h3>
+                <p>Visit the <a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages documentation</a> for more help.</p>
+                <a href="https://github.com/JayZS/jayzs.github.io" class="btn" target="_blank"><i class="fab fa-github"></i> Check Your Repository</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Setup Section -->
+    <section id="quick-setup" style="background-color: var(--light);">
+        <div class="container">
+            <h2 class="section-title">Quick Setup Guide</h2>
+            <p>Follow these steps to quickly set up your GitHub Pages site:</p>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Create a New Repository</h3>
+                    <p>Create a new repository named <strong>jayzs.github.io</strong> (must match your username exactly)</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Clone the Repository</h3>
+                    <div class="code-block">
+                        git clone https://github.com/JayZS/jayzs.github.io.git<br>
+                        cd jayzs.github.io
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Create index.html</h3>
+                    <p>Create an index.html file with your content. You can use the code from this page!</p>
+                    <div class="code-block">
+                        # Copy the entire HTML code from this page<br>
+                        # Paste it into a new file named index.html<br>
+                        # Customize with your information
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Commit and Push</h3>
+                    <div class="code-block">
+                        git add index.html<br>
+                        git commit -m "Initial commit"<br>
+                        git push origin main
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Configure GitHub Pages</h3>
+                    <p>Go to your repository Settings → Pages → Select "main" branch as source → Save</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h3>Wait and Visit</h3>
+                    <p>Wait a few minutes, then visit <strong>https://jayzs.github.io</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 JayZS. All rights reserved.</p>
+            <p>This page serves as both a personal portfolio and GitHub Pages troubleshooting guide.</p>
+        </div>
+    </footer>
+</body>
+</html>
