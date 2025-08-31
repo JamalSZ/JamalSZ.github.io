@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jamal Mohammed | PhD Candidate in Computer Science</title>
+    <title>Jamal Mohammed | PhD in Computer Science</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -115,10 +115,28 @@
             margin: 0 auto;
         }
 
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 30px;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: 700;
+        }
+
+        .hero-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+            font-weight: 600;
         }
 
         .hero p {
@@ -233,6 +251,59 @@
         .highlight {
             color: var(--secondary);
             font-weight: 600;
+        }
+
+        .phd-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ffec8b);
+            color: #8b7500;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Research Interests Section */
+        .research-interests {
+            background: var(--card-bg);
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .interest-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .interest-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .interest-card p {
+            margin-bottom: 15px;
+            line-height: 1.7;
         }
 
         /* Skills Section */
@@ -430,6 +501,10 @@
                 font-size: 2.8rem;
             }
             
+            .hero-title {
+                font-size: 1.5rem;
+            }
+            
             .hero p {
                 font-size: 1.2rem;
             }
@@ -444,6 +519,10 @@
                 font-size: 2.3rem;
             }
             
+            .hero-title {
+                font-size: 1.3rem;
+            }
+            
             .section-title h2 {
                 font-size: 2rem;
             }
@@ -456,6 +535,11 @@
             .story-narration {
                 padding: 20px;
             }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -467,6 +551,7 @@
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#research-interests">Research Interests</a></li>
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#research">Research</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -478,7 +563,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h1>PhD Candidate in Computer Science</h1>
+            <img src="15175868_orig.jpg" alt="Jamal Mohammed" class="profile-img">
+            <h1>Jamal Mohammed</h1>
+            <div class="hero-title">PhD in Computer Science <span class="phd-badge">Great Distinction</span></div>
             <p>Specializing in Time Series Predictability, Deep Learning, and Algorithm Design</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -497,7 +584,7 @@
             <div class="story-narration">
                 <p>My journey in computer science began at Politecnico di Torino, where I earned my Bachelor's degree in Computer Engineering. It was here that I developed a strong foundation in computational thinking and problem-solving. My passion for the field grew, leading me to pursue a Master's degree in Computer Science at the Free University of Bolzano, where I graduated with top honors (110/110, top 1%).</p>
                 
-                <p>Currently, I'm in the final stages of my <span class="highlight">Ph.D. in Computer Science at the University of Zurich</span>, focusing on time series predictability and information theory. My research combines deep learning with algorithmic modeling to push the boundaries of what's possible in forecasting and predictive analytics.</p>
+                <p>I recently completed my <span class="highlight">Ph.D. in Computer Science at the University of Zurich</span>, defending my thesis with <span class="highlight">Great Distinction</span>. My research focused on time series predictability and information theory, combining deep learning with algorithmic modeling to push the boundaries of what's possible in forecasting and predictive analytics.</p>
                 
                 <p>My professional experience includes working as a <span class="highlight">Data Analyst at Durst Phototechnik AG</span>, where I developed RNN and Bayesian ML models for anomaly detection. I collaborated closely with engineering teams to integrate these predictive models into maintenance pipelines, gaining valuable experience in deploying machine learning solutions in real-world scenarios.</p>
                 
@@ -624,6 +711,49 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section id="research-interests" class="research-interests">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Research Interests</h2>
+            </div>
+            
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Multivariate Time Series Predictability</h3>
+                    <p>Extending my PhD work on univariate time series predictability to multivariate domains, developing frameworks to quantify and estimate predictability bounds for complex, multi-dimensional temporal data.</p>
+                </div>
+                
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Explainable AI for Time Series</h3>
+                    <p>Creating data-driven explainability and interpretability methods specifically designed for time series forecasting models, making complex temporal patterns understandable to domain experts.</p>
+                </div>
+                
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>AutoML Integration</h3>
+                    <p>Integrating my predictability estimation framework into open-source AutoML systems like Uber's Orbit, Facebook's Prophet, and Unit8's Darts to enhance automated time series analysis pipelines.</p>
+                </div>
+            </div>
+            
+            <div class="story-narration" style="margin-top: 50px;">
+                <p>My research aims to bridge the gap between theoretical predictability bounds and practical forecasting applications. During my PhD, I developed novel methods to quantify the upper limits of predictability in univariate time series. Now I'm expanding this work to multivariate time series, which presents unique challenges due to cross-dimensional dependencies and interactions.</p>
+                
+                <p>I'm particularly interested in how predictability estimation can enhance explainable AI for temporal data. By understanding the fundamental limits of what can be predicted in a time series, we can better evaluate model performance, identify when predictions are reliable, and explain why certain patterns are difficult to forecast.</p>
+                
+                <p>Another key focus is integrating these concepts into open-source AutoML systems. I'm working on incorporating my predictability framework into libraries like u8darts to help data scientists automatically assess forecast difficulty and select appropriate models for their specific time series problems.</p>
             </div>
         </div>
     </section>
