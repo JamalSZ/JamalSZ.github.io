@@ -102,27 +102,34 @@
             width: 100%;
         }
 
-        /* Hero Section */
+        /* Hero Section - Updated for side-by-side layout */
         .hero {
             padding: 160px 0 100px;
             background: linear-gradient(135deg, var(--primary) 0%, #1a2530 100%);
             color: white;
-            text-align: left;
         }
 
         .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 0 0 auto;
         }
 
         .profile-img {
-            width: 300px;
-            height: 500px;
+            width: 280px;
+            height: 280px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid rgba(255, 255, 255, 0.3);
-            margin: 0 auto 30px;
-            display: block;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
@@ -134,7 +141,7 @@
 
         .hero-title {
             font-size: 1.8rem;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             color: var(--secondary);
             font-weight: 600;
         }
@@ -147,7 +154,6 @@
 
         .hero-buttons {
             display: flex;
-            justify-content: center;
             gap: 20px;
             margin-top: 40px;
         }
@@ -182,6 +188,17 @@
             color: var(--primary);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .phd-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ffec8b);
+            color: #8b7500;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-left: 10px;
+            font-size: 0.9rem;
         }
 
         /* Section Styling */
@@ -251,17 +268,6 @@
         .highlight {
             color: var(--secondary);
             font-weight: 600;
-        }
-
-        .phd-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #ffd700, #ffec8b);
-            color: #8b7500;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            margin-left: 10px;
-            font-size: 0.9rem;
         }
 
         /* Research Interests Section */
@@ -497,6 +503,15 @@
                 grid-template-columns: 1fr;
             }
             
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text, .hero-image {
+                width: 100%;
+            }
+            
             .hero h1 {
                 font-size: 2.8rem;
             }
@@ -507,6 +522,10 @@
             
             .hero p {
                 font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
             }
         }
 
@@ -537,8 +556,8 @@
             }
             
             .profile-img {
-                width: 150px;
-                height: 150px;
+                width: 200px;
+                height: 200px;
             }
         }
     </style>
@@ -560,16 +579,161 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Side-by-Side Layout -->
     <section class="hero">
         <div class="container hero-content">
-            <img src="15175868_orig.jpg" alt="Jamal Mohammed" class="profile-img">
-            <h1>Jamal Mohammed</h1>
-            <div class="hero-title">PhD in Computer Science <span class="phd-badge">Great Distinction</span></div>
-            <p>Specializing in Time Series Predictability, Deep Learning, and Algorithm Design</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                <a href="#publications" class="btn btn-outline">View Publications</a>
+            <div class="hero-text">
+                <h1>Jamal Mohammed</h1>
+                <div class="hero-title">PhD in Computer Science <span class="phd-badge">Great Distinction</span></div>
+                <p>Specializing in Time Series Predictability, Deep Learning, and Algorithm Design</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#publications" class="btn btn-outline">View Publications</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="15175868_orig.jpg" alt="Jamal Mohammed" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Journey</h2>
+            </div>
+            
+            <div class="story-narration">
+                <p>My journey in computer science began at Politecnico di Torino, where I earned my Bachelor's degree in Computer Engineering. It was here that I developed a strong foundation in computational thinking and problem-solving. My passion for the field grew, leading me to pursue a Master's degree in Computer Science at the Free University of Bolzano, where I graduated with top honors (110/110, top 1%).</p>
+                
+                <p>I recently completed my <span class="highlight">Ph.D. in Computer Science at the University of Zurich</span>, defending my thesis with <span class="highlight">Great Distinction</span>. My research focused on time series predictability and information theory, combining deep learning with algorithmic modeling to push the boundaries of what's possible in forecasting and predictive analytics.</p>
+                
+                <p>My professional experience includes working as a <span class="highlight">Data Analyst at Durst Phototechnik AG</span>, where I developed RNN and Bayesian ML models for anomaly detection. I collaborated closely with engineering teams to integrate these predictive models into maintenance pipelines, gaining valuable experience in deploying machine learning solutions in real-world scenarios.</p>
+                
+                <p>Throughout my academic and professional journey, I've developed expertise in <span class="highlight">Python, PyTorch, TensorFlow, and various ML techniques</span> including transformers and neural forecasting. I've also served as a Teaching Assistant for Database Systems at the University of Zurich and have had the privilege of supervising several MSc and BSc theses.</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages & Frameworks</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>PyTorch</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>TensorFlow</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>SQL</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>ML Techniques</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Time Series Analysis</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Transformers</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Neural Forecasting</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Bayesian Methods</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Git</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Docker</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>ONNX</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JIRA</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -616,29 +780,6 @@
             </div>
         </div>
     </section>
-
-    
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Journey</h2>
-            </div>
-            
-            <div class="story-narration">
-                <p>My journey in computer science began at Politecnico di Torino, where I earned my Bachelor's degree in Computer Engineering. It was here that I developed a strong foundation in computational thinking and problem-solving. My passion for the field grew, leading me to pursue a Master's degree in Computer Science at the Free University of Bolzano, where I graduated with top honors (110/110, top 1%).</p>
-                
-                <p>I recently completed my <span class="highlight">Ph.D. in Computer Science at the University of Zurich</span>, defending my thesis with <span class="highlight">Great Distinction</span>. My research focused on time series predictability and information theory, combining deep learning with algorithmic modeling to push the boundaries of what's possible in forecasting and predictive analytics.</p>
-                
-                <p>My professional experience includes working as a <span class="highlight">Data Analyst at Durst Phototechnik AG</span>, where I developed RNN and Bayesian ML models for anomaly detection. I collaborated closely with engineering teams to integrate these predictive models into maintenance pipelines, gaining valuable experience in deploying machine learning solutions in real-world scenarios.</p>
-                
-                <p>Throughout my academic and professional journey, I've developed expertise in <span class="highlight">Python, PyTorch, TensorFlow, and various ML techniques</span> including transformers and neural forecasting. I've also served as a Teaching Assistant for Database Systems at the University of Zurich and have had the privilege of supervising several MSc and BSc theses.</p>
-            </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- Publications Section -->
     <section id="publications" class="publications">
