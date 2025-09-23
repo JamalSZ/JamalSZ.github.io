@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jamal Mohammed, PhD | Computer Science Researcher</title>
+    <title>Jamal Mohammed, PhD | Data Research Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
+            --primary: #0066cc;
+            --secondary: #2c3e50;
             --light: #f8f9fa;
             --text: #333;
             --background: #fff;
             --card-bg: #fff;
             --transition: all 0.3s ease;
+            --border-color: #e1e5e9;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
         }
 
         body {
+            font-family: 'Inter', sans-serif;
             background-color: var(--background);
             color: var(--text);
             line-height: 1.6;
@@ -32,21 +33,20 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header & Navigation */
+        /* Header */
         header {
-            background: var(--primary);
-            color: white;
+            background: white;
             padding: 20px 0;
             position: sticky;
-            width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .header-container {
@@ -56,106 +56,92 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 600;
-        }
-
-        .logo span {
-            color: var(--secondary);
+            color: var(--primary);
         }
 
         nav ul {
             display: flex;
             list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 25px;
+            gap: 30px;
         }
 
         nav ul li a {
-            color: white;
+            color: var(--text);
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
         }
 
         nav ul li a:hover {
-            color: var(--secondary);
+            color: var(--primary);
         }
 
         /* Hero Section */
         .hero {
-            padding: 120px 0 80px;
-            background: var(--primary);
-            color: white;
+            padding: 80px 0;
             text-align: center;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
             font-weight: 700;
+            color: var(--secondary);
         }
 
-        .hero-title {
+        .hero-subtitle {
             font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 600;
             margin-bottom: 20px;
-            color: var(--secondary);
-            font-weight: 500;
         }
 
         .hero p {
             font-size: 1.1rem;
-            margin-bottom: 30px;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 40px;
+            color: #666;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
-            margin-top: 30px;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 25px;
-            border-radius: 4px;
+            padding: 12px 28px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
             display: inline-block;
+            border: 2px solid var(--primary);
         }
 
         .btn-primary {
-            background: var(--secondary);
+            background: var(--primary);
             color: white;
         }
 
         .btn-primary:hover {
-            background: #2980b9;
+            background: #0052a3;
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,102,204,0.3);
         }
 
         .btn-outline {
-            border: 1px solid white;
-            color: white;
+            background: transparent;
+            color: var(--primary);
         }
 
         .btn-outline:hover {
-            background: white;
-            color: var(--primary);
+            background: var(--primary);
+            color: white;
         }
 
         /* Section Styling */
@@ -165,201 +151,293 @@
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
-            font-size: 2rem;
-            color: var(--primary);
+            font-size: 2.2rem;
+            color: var(--secondary);
             margin-bottom: 15px;
             font-weight: 600;
+        }
+
+        .section-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         /* Card Styling */
         .card {
             background: var(--card-bg);
-            padding: 25px;
-            border-radius: 6px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
             transition: var(--transition);
             margin-bottom: 25px;
+            border: 1px solid var(--border-color);
         }
 
         .card:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
         }
 
         .card h3 {
-            color: var(--primary);
+            color: var(--secondary);
             margin-bottom: 15px;
             font-size: 1.3rem;
-        }
-
-        /* Research Interests */
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .interest-icon {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-
-        /* Publications */
-        .pub-item {
-            border-left: 3px solid var(--secondary);
-            padding-left: 20px;
-        }
-
-        .pub-authors {
-            color: #666;
-            margin-bottom: 8px;
-            font-style: italic;
-        }
-
-        .pub-conference {
-            color: var(--secondary);
-            font-weight: 500;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .pub-doi {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Research Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-
-        .project-tag {
-            background: var(--secondary);
-            color: white;
-            padding: 4px 10px;
-            border-radius: 3px;
-            font-size: 0.8rem;
+            font-weight: 600;
         }
 
         /* About Section */
         .about-content {
             max-width: 800px;
             margin: 0 auto;
+            text-align: left;
         }
 
         .about-content p {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             line-height: 1.7;
+            font-size: 1.05rem;
         }
 
         .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .skill-category h4 {
             color: var(--secondary);
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 5px 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            width: 15px;
+            display: inline-block;
+        }
+
+        /* Publications */
+        .publication {
+            border-left: 4px solid var(--primary);
+            padding-left: 25px;
+            margin-bottom: 30px;
+        }
+
+        .pub-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .pub-authors {
+            color: #666;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .pub-venue {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .pub-doi {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 40px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .experience-company {
+            color: var(--primary);
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .experience-date {
+            color: #666;
+            font-size: 0.95rem;
             font-weight: 500;
         }
 
-        /* Contact Section */
-        .contact-info {
+        .experience-details {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-details li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .experience-details li::before {
+            content: "▸";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Contact */
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             max-width: 700px;
             margin: 0 auto;
         }
 
-        .contact-detail {
+        .contact-item {
             display: flex;
             align-items: center;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
         }
 
         .contact-icon {
-            width: 40px;
-            height: 40px;
-            background-color: var(--secondary);
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
-            font-size: 1rem;
+            margin-right: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info h4 {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin: 0;
         }
 
         /* Footer */
         footer {
-            background: var(--primary);
+            background: var(--secondary);
             color: white;
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 0;
         }
 
-        .footer-social {
-            margin-bottom: 15px;
+        .social-links {
+            margin-bottom: 20px;
         }
 
-        .footer-social a {
+        .social-links a {
             color: white;
-            font-size: 1.2rem;
-            margin: 0 12px;
+            font-size: 1.3rem;
+            margin: 0 15px;
             transition: var(--transition);
         }
 
-        .footer-social a:hover {
-            color: var(--secondary);
+        .social-links a:hover {
+            color: var(--primary);
+            transform: translateY(-2px);
         }
 
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
+        /* Responsive */
+        @media (max-width: 768px) {
             nav ul {
                 display: none;
             }
-            
+
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
-            
-            .hero-title {
+
+            .hero-subtitle {
                 font-size: 1.1rem;
             }
-            
+
             .section-title h2 {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
             }
-            
-            .hero-buttons {
+
+            .experience-header {
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
             }
-            
-            .profile-img {
-                width: 150px;
-                height: 150px;
+
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header>
         <div class="container header-container">
-            
+            <div class="logo">Jamal Mohammed, PhD</div>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#research-interests">Research</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -370,12 +448,11 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            
             <h1>Jamal Mohammed</h1>
-            <div class="hero-title">PhD in Computer Science | University of Zurich</div>
-            <p>Specializing in Time Series Predictability, Machine Learning for Forecasting, and Algorithmic Optimization</p>
+            <div class="hero-subtitle">Data Research Engineer | Ph.D in Computer Science</div>
+            <p>Specializing in large-scale data systems, multimodal AI, statistical modeling, and dataset curation for foundation models. Expert in building scalable data pipelines and developing theoretical frameworks for ML applications.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Contact Me</a>
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
                 <a href="#publications" class="btn btn-outline">View Publications</a>
             </div>
         </div>
@@ -386,59 +463,106 @@
         <div class="container">
             <div class="section-title">
                 <h2>About Me</h2>
+                <p class="section-subtitle">Data Research Engineer with expertise in building high-quality datasets and scalable ML systems</p>
             </div>
             
             <div class="about-content">
-                <p>I recently completed my PhD in Computer Science at the University of Zurich, defending my thesis with Great Distinction. My research focused on time series predictability and information theory, combining deep learning with algorithmic modeling to advance forecasting and predictive analytics.</p>
+                <p>I recently completed my <span class="highlight">Ph.D. in Computer Science</span> at the University of Zurich with Magna Cum Laude distinction. My research focused on <span class="highlight">large-scale data analysis, statistical modeling, and developing theoretical frameworks for multimodal AI systems</span>.</p>
                 
-                <p>My academic journey began with a Bachelor's degree in Computer Engineering from Politecnico di Torino, followed by a Master's degree in Computer Science from the Free University of Bolzano, where I graduated with top honors (110/110, top 1%).</p>
+                <p>With extensive experience in <span class="highlight">data engineering and analysis</span>, I've built scalable data pipelines, curated high-quality datasets for ML training, and conducted comprehensive statistical analysis on real-world datasets. My work bridges academic research with practical applications in industry settings.</p>
                 
-                <p>Professionally, I've worked as a Data Analyst at Durst Phototechnik AG, developing RNN and Bayesian ML models for anomaly detection. I collaborated with engineering teams to integrate predictive models into maintenance pipelines, gaining practical experience in deploying machine learning solutions.</p>
-                
-                <p>My expertise includes Python, PyTorch, TensorFlow, and various ML techniques including transformers and neural forecasting. I've also served as a Teaching Assistant for Database Systems at the University of Zurich and have supervised several MSc and BSc theses.</p>
-            </div> 
+                <p>I have hands-on experience in <span class="highlight">collaborative research environments</span>, having worked with industry partners at Durst Phototechnik AG where I developed anomaly detection systems that reduced equipment downtime by 23%. I excel at translating complex research insights into practical solutions for cross-functional teams.</p>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Data Engineering & Analysis</h4>
+                    <ul class="skill-list">
+                        <li>Large-scale dataset curation</li>
+                        <li>Statistical analysis & EDA</li>
+                        <li>Data pipeline development</li>
+                        <li>Multimodal data processing</li>
+                        <li>Real-time data streaming</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Programming & Frameworks</h4>
+                    <ul class="skill-list">
+                        <li>Python (Expert)</li>
+                        <li>NumPy, Pandas (Expert)</li>
+                        <li>PyTorch, TensorFlow</li>
+                        <li>SQL (Advanced)</li>
+                        <li>MATLAB, R, Java</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>ML & Deep Learning</h4>
+                    <ul class="skill-list">
+                        <li>Transformers & Vision models</li>
+                        <li>Time series forecasting</li>
+                        <li>Model evaluation & ablation</li>
+                        <li>Anomaly detection</li>
+                        <li>Statistical modeling</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Data Quality & Tools</h4>
+                    <ul class="skill-list">
+                        <li>Dataset auditing & validation</li>
+                        <li>MLflow, Docker, Git</li>
+                        <li>AWS cloud platforms</li>
+                        <li>High-performance computing</li>
+                        <li>Responsible AI practices</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Research Interests Section -->
-    <section id="research-interests">
+    <!-- Experience Section -->
+    <section id="experience">
         <div class="container">
             <div class="section-title">
-                <h2>Research Interests</h2>
+                <h2>Professional Experience</h2>
+                <p class="section-subtitle">Data research and engineering roles with focus on scalable ML systems</p>
             </div>
-            
-            <div class="interests-grid">
-                <div class="card">
-                    <div class="interest-icon">
-                        <i class="fas fa-chart-line"></i>
+
+            <div class="card experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Data Research Engineer & Doctoral Researcher</div>
+                        <div class="experience-company">University of Zurich, Switzerland</div>
                     </div>
-                    <h3>Multivariate Time Series Predictability</h3>
-                    <p>Extending PhD work on univariate time series predictability to multivariate domains, developing frameworks to quantify predictability bounds for complex temporal data.</p>
+                    <div class="experience-date">Feb 2021–Aug 2025</div>
                 </div>
-                
-                <div class="card">
-                    <div class="interest-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Explainable AI for Time Series</h3>
-                    <p>Creating interpretability methods specifically designed for time series forecasting models, making complex temporal patterns understandable to domain experts.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="interest-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>AutoML Integration</h3>
-                    <p>Integrating predictability estimation into open-source AutoML systems to enhance automated time series analysis pipelines.</p>
-                </div>
+                <ul class="experience-details">
+                    <li><strong>Dataset Development:</strong> Created high-quality time series datasets for training foundation models, implementing rigorous quality controls and diversity metrics</li>
+                    <li><strong>Data Pipeline Engineering:</strong> Designed scalable data ingestion and preprocessing pipelines for large-scale multimodal datasets</li>
+                    <li><strong>Statistical Analysis:</strong> Conducted comprehensive EDA on real-world datasets to assess quality, identify biases, and optimize data composition</li>
+                    <li><strong>Model Evaluation:</strong> Performed systematic data ablation studies comparing theoretical bounds against state-of-the-art models</li>
+                    <li><strong>Research Impact:</strong> Published first-author paper at SIGKDD and built open-source toolkit for dataset evaluation</li>
+                </ul>
             </div>
-            
-            <div class="card">
-                <p>My research bridges theoretical predictability bounds and practical forecasting applications. I'm expanding my PhD work to multivariate time series, which presents unique challenges due to cross-dimensional dependencies.</p>
-                
-                <p>I'm particularly interested in how predictability estimation can enhance explainable AI for temporal data. By understanding the fundamental limits of prediction, we can better evaluate model performance and explain why certain patterns are difficult to forecast.</p>
-                
-                <p>Another focus is integrating these concepts into open-source AutoML systems to help data scientists automatically assess forecast difficulty and select appropriate models.</p>
+
+            <div class="card experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Data Engineer & Research Analyst</div>
+                        <div class="experience-company">Durst Phototechnik AG & Free University of Bolzano</div>
+                    </div>
+                    <div class="experience-date">Jun 2019–Sep 2020</div>
+                </div>
+                <ul class="experience-details">
+                    <li><strong>Industrial Data Processing:</strong> Developed end-to-end data pipelines for large-scale, unstructured time series data from industrial systems</li>
+                    <li><strong>Anomaly Detection:</strong> Implemented ML-based systems that reduced equipment downtime by 23%</li>
+                    <li><strong>Predictive Analytics:</strong> Built and deployed Bayesian ML models for real-time predictive maintenance</li>
+                    <li><strong>Data Quality:</strong> Established validation frameworks and quality metrics for industrial sensor data</li>
+                    <li><strong>Cross-functional Collaboration:</strong> Worked with engineering teams to integrate ML solutions into production systems</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -448,51 +572,28 @@
         <div class="container">
             <div class="section-title">
                 <h2>Publications</h2>
+                <p class="section-subtitle">Research contributions in data analysis and machine learning</p>
             </div>
-            
-            <div class="card pub-item">
-                <h3>Quantifying and Estimating the Predictability Upper Bound of Univariate Numeric Time Series</h3>
-                <div class="pub-authors">J. Mohammed, M. H. Böhlen, S. Helmer</div>
-                <span class="pub-conference">SIGKDD 2024</span>
-                <p class="pub-doi">DOI:10.3390/e17042367 (First Author)</p>
-            </div>
-            
-            <div class="card pub-item">
-                <h3>Multi-Horizon Predictability Upper Bound Time Series Forecasting</h3>
-                <div class="pub-authors">J. Mohammed</div>
-                <span class="pub-conference">Under review: AAAI 2026 (Sole Author)</span>
-            </div>
-            
-            <div class="card pub-item">
-                <h3>Efficient Subsequence Matching in Time Series for Entropy Rate Estimation</h3>
-                <div class="pub-authors">J. Mohammed, M. H. Böhlen, S. Helmer</div>
-                <span class="pub-conference">In preparation: SIGMOD 2026 (First Author)</span>
-            </div>
-        </div>
-    </section>
 
-    <!-- Research Projects Section -->
-    <section id="research">
-        <div class="container">
-            <div class="section-title">
-                <h2>Research Projects</h2>
+            <div class="publication">
+                <div class="pub-title">Quantifying and Estimating the Predictability Upper Bound of Univariate Numeric Time Series</div>
+                <div class="pub-authors">J. Mohammed, M. H. Böhlen, S. Helmer</div>
+                <div class="pub-venue">30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD 2024)</div>
+                <div class="pub-doi">DOI: 10.3390/e17042367 • First Author</div>
             </div>
-            
-            <div class="projects-grid">
-                <div class="card">
-                    <h3>Entropy-based Forecast Accuracy Bound Toolkit</h3>
-                    <p>Toolkit for implementing forecasting pipelines and evaluating prediction accuracy bounds using information theory.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Time Series Predictability Framework</h3>
-                    <p>Model-agnostic frameworks for estimating upper bounds of predictability in univariate time series.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Anomaly Detection in Industrial Systems</h3>
-                    <p>RNN and Bayesian neural networks for predictive maintenance and anomaly detection.</p>
-                </div>
+
+            <div class="publication">
+                <div class="pub-title">Multi-Horizon Predictability Upper Bound Time Series Forecasting</div>
+                <div class="pub-authors">J. Mohammed</div>
+                <div class="pub-venue">Submitted to AAAI 2026</div>
+                <div class="pub-doi">Under Review • Sole Author</div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-title">Efficient Subsequence Matching in Time Series for Entropy Rate Estimation</div>
+                <div class="pub-authors">J. Mohammed, M. H. Böhlen, S. Helmer</div>
+                <div class="pub-venue">In preparation for IEEE TKDE Journal</div>
+                <div class="pub-doi">In Preparation • First Author</div>
             </div>
         </div>
     </section>
@@ -502,36 +603,47 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contact</h2>
+                <p class="section-subtitle">Let's discuss data research opportunities</p>
             </div>
-            
-            <div class="contact-info">
-                <div class="contact-detail">
+
+            <div class="contact-grid">
+                <div class="contact-item">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <div>
-                        <h3>Email</h3>
+                    <div class="contact-info">
+                        <h4>Email</h4>
                         <p>mjamal@ifi.uzh.ch</p>
                     </div>
                 </div>
-                
-                <div class="contact-detail">
+
+                <div class="contact-item">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div>
-                        <h3>Location</h3>
-                        <p>Binzmühlestrasse 14, Zurich, CH-8050</p>
+                    <div class="contact-info">
+                        <h4>Location</h4>
+                        <p>Zurich, Switzerland</p>
                     </div>
                 </div>
-                
-                <div class="contact-detail">
+
+                <div class="contact-item">
                     <div class="contact-icon">
-                        <i class="fas fa-university"></i>
+                        <i class="fab fa-linkedin"></i>
                     </div>
-                    <div>
-                        <h3>University</h3>
-                        <p>University of Zurich</p>
+                    <div class="contact-info">
+                        <h4>LinkedIn</h4>
+                        <p>Professional Network</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Website</h4>
+                        <p>jamalsz.github.io</p>
                     </div>
                 </div>
             </div>
@@ -541,28 +653,41 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-social">
+            <div class="social-links">
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-google-scholar"></i></a>
+                <a href="#"><i class="fab fa-orcid"></i></a>
             </div>
-            <p>&copy; 2023 Jamal Mohammed. All Rights Reserved.</p>
+            <p>&copy; 2025 Jamal Mohammed. Data Research Engineer specializing in scalable ML systems.</p>
         </div>
     </footer>
 
     <script>
-        // Add smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'white';
+                header.style.backdropFilter = 'none';
+            }
         });
     </script>
 </body>
