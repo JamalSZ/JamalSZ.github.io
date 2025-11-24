@@ -3,736 +3,512 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jamal Mohammed - Time Series Specialist & ML Engineer</title>
+    <title>Jamal Mohammed - CV</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        :root {
-            --primary-color: #2c5f7f;
-            --secondary-color: #4a8fb5;
-            --accent-color: #e8963f;
-            --text-primary: #2d3436;
-            --text-secondary: #636e72;
-            --background: #ffffff;
-            --background-alt: #f8f9fa;
-            --border-color: #e1e8ed;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
-        }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-primary);
-            background: var(--background);
-            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
         }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 4rem 2rem 3rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 50 Q 25 25, 50 50 T 100 50" stroke="rgba(255,255,255,0.05)" stroke-width="2" fill="none"/></svg>');
-            opacity: 0.3;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        header .subtitle {
-            font-size: 1.25rem;
-            font-weight: 400;
-            opacity: 0.95;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        header .tagline {
-            font-size: 1rem;
-            opacity: 0.85;
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Navigation */
-        nav {
-            background: white;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 0;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        nav a {
-            display: block;
-            padding: 1rem 1.5rem;
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-            background: var(--background-alt);
-            border-bottom-color: var(--accent-color);
-        }
-
-        /* Container */
+        
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 2rem;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-
-        /* Section */
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .header-content {
+            flex: 1;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+        
+        .summary {
+            background-color: #f8f9fa;
+            padding: 30px 40px;
+            border-left: 4px solid #667eea;
+            margin: 0;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
         section {
-            padding: 4rem 0;
-            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
         }
-
-        section:last-of-type {
-            border-bottom: none;
+        
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
         }
-
-        section h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            position: relative;
-            padding-bottom: 0.75rem;
+        
+        h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            margin-top: 20px;
         }
-
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--accent-color);
-            border-radius: 2px;
+        
+        h4 {
+            color: #555;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 5px;
         }
-
-        /* About Section */
-        #about p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
         }
-
-        .highlight-box {
-            background: var(--background-alt);
-            border-left: 4px solid var(--accent-color);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 4px;
+        
+        .job-title {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1em;
         }
-
-        .highlight-box h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.75rem;
-            font-size: 1.25rem;
+        
+        .job-date {
+            color: #666;
+            font-style: italic;
+            font-size: 0.95em;
         }
-
-        /* Skills Section */
+        
+        .company {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .skill-category:hover {
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-2px);
-        }
-
-        .skill-category h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.15rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-category h3::before {
-            content: '▸';
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
-            padding: 0.5rem 0;
-            color: var(--text-secondary);
-            border-bottom: 1px solid var(--background-alt);
-        }
-
-        .skill-category li:last-child {
-            border-bottom: none;
-        }
-
-        /* Projects Section */
-        .project-card {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            box-shadow: var(--shadow-hover);
-            border-color: var(--secondary-color);
-        }
-
-        .project-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.75rem;
-            font-size: 1.35rem;
-        }
-
-        .project-card .year {
-            display: inline-block;
-            background: var(--accent-color);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .project-card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        .project-card .impact {
-            background: var(--background-alt);
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 4px;
-            font-style: italic;
-            color: var(--text-primary);
-        }
-
-        /* Publications Section */
-        .publication {
-            background: white;
-            border-left: 4px solid var(--secondary-color);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-        }
-
-        .publication:hover {
-            box-shadow: var(--shadow-hover);
-            transform: translateX(4px);
-        }
-
-        .publication .authors {
-            color: var(--text-primary);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication .title {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            line-height: 1.5;
-        }
-
-        .publication .venue {
-            color: var(--text-secondary);
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication .status {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
-
-        .status.published {
-            background: #d4edda;
-            color: #155724;
-        }
-
-        .status.under-review {
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .status.in-preparation {
-            background: #d1ecf1;
-            color: #0c5460;
-        }
-
-        /* Contact Section */
-        #contact {
-            background: var(--background-alt);
-        }
-
-        .contact-grid {
-            display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 20px;
+            margin-top: 20px;
         }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            background: white;
-            padding: 1.5rem;
+        
+        .skill-category {
+            background-color: #f8f9fa;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
         }
-
-        .contact-item:hover {
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-2px);
+        
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 10px;
         }
-
-        .contact-item .icon {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            min-width: 40px;
-            text-align: center;
+        
+        .publication {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #764ba2;
         }
-
-        .contact-item a {
-            color: var(--text-primary);
-            text-decoration: none;
-            word-break: break-all;
-            transition: color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Buttons */
-        .btn-container {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 2rem;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
+        
+        .publication-title {
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow);
+            color: #333;
+            margin-bottom: 5px;
         }
-
-        .btn:hover {
-            background: var(--secondary-color);
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-2px);
+        
+        .publication-venue {
+            color: #666;
+            font-style: italic;
+            font-size: 0.95em;
         }
-
-        .btn-secondary {
-            background: var(--accent-color);
+        
+        .award {
+            background-color: #fff9e6;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #ffc107;
         }
-
-        .btn-secondary:hover {
-            background: #d68532;
+        
+        .impact-box {
+            background-color: #e8f4f8;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
         }
-
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+        
+        .impact-box h4 {
+            color: #17a2b8;
+            margin-bottom: 10px;
         }
-
-        footer p {
-            opacity: 0.9;
-        }
-
-        /* Responsive Design */
+        
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header .subtitle {
-                font-size: 1.1rem;
-            }
-
-            section {
-                padding: 3rem 0;
-            }
-
-            section h2 {
-                font-size: 1.75rem;
-            }
-
-            nav a {
-                padding: 0.875rem 1rem;
-                font-size: 0.95rem;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .btn-container {
+            header {
                 flex-direction: column;
+                text-align: center;
             }
-
-            .btn {
-                width: 100%;
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .contact-info {
                 justify-content: center;
             }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
-
-        @media (max-width: 480px) {
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
             .container {
-                padding: 0 1rem;
+                box-shadow: none;
             }
-
+            
             header {
-                padding: 3rem 1rem 2rem;
+                background: #667eea;
             }
-
-            header h1 {
-                font-size: 1.75rem;
-            }
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Selection Color */
-        ::selection {
-            background: var(--accent-color);
-            color: white;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Jamal Mohammed</h1>
-        <p class="subtitle">Time Series Specialist | Database Systems Expert | Ph.D. Computer Science</p>
-        <p class="tagline">Designing scalable ML systems for time series forecasting, anomaly detection, and predictive maintenance</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#research">Research & Projects</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main class="container">
-        <section id="about">
-            <h2>About</h2>
-            <p>
-                Machine Learning Engineer with deep expertise in designing scalable ML systems, time series forecasting, and anomaly detection. Currently completing my Ph.D. in Computer Science at the University of Zurich (Magna Cum Laude, graduating August 2025), where I've specialized in applying deep learning and information-theoretic approaches to real-world challenges in predictive maintenance, process optimization, and industrial automation.
-            </p>
-            <p>
-                My research focuses on quantifying and pushing the theoretical limits of time series predictability, developing novel frameworks that bridge the gap between theoretical bounds and practical forecasting systems. I've deployed production-grade ML solutions that have reduced industrial downtime by 23% and improved forecasting accuracy by 15% on engineering datasets.
-            </p>
-
-            <div class="highlight-box">
-                <h3>PhD Research Focus</h3>
-                <p>My doctoral work centers on <strong>time series predictability analysis and forecasting systems</strong>, combining theoretical information theory with practical deep learning implementations. I've developed novel methods to quantify the upper bounds of what can be predicted in time series data, enabling more informed model selection and realistic performance expectations in industrial applications.</p>
-            </div>
-
-            <p>
-                Beyond research, I bring extensive experience in database systems, having served as Teaching Assistant for Database Systems at the University of Zurich for three years. This combination of time series expertise and database systems knowledge positions me uniquely for roles in data engineering and AI engineering, where understanding both data infrastructure and advanced ML techniques is crucial.
-            </p>
-
-            <div class="btn-container">
-                <a href="cv.pdf" class="btn" download>
-                    📄 Download CV
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    ✉️ Get in Touch
-                </a>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Technical Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Machine Learning & AI</h3>
-                    <ul>
-                        <li>Deep Learning: Transformers, RNNs, LSTMs</li>
-                        <li>Time Series Forecasting</li>
-                        <li>Anomaly Detection Systems</li>
-                        <li>Bayesian Models & Optimization</li>
-                        <li>Information Theory Applications</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Frameworks & Tools</h3>
-                    <ul>
-                        <li>PyTorch, TensorFlow, Keras</li>
-                        <li>Pandas, NumPy, Scikit-learn</li>
-                        <li>Statsmodels, SciPy</li>
-                        <li>ONNX Model Deployment</li>
-                        <li>MLflow Experiment Tracking</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Database Systems</h3>
-                    <ul>
-                        <li>Advanced SQL (Expert Level)</li>
-                        <li>Database Design & Optimization</li>
-                        <li>Time Series Databases</li>
-                        <li>Query Performance Tuning</li>
-                        <li>Data Modeling & ETL Pipelines</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python (Expert)</li>
-                        <li>SQL (Advanced)</li>
-                        <li>C, MATLAB, R</li>
-                        <li>Java (Intermediate)</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Infrastructure & DevOps</h3>
-                    <ul>
-                        <li>High-Performance Computing (CUDA)</li>
-                        <li>Multi-GPU Training & HPC Clusters</li>
-                        <li>Docker Containerization</li>
-                        <li>AWS Cloud Services</li>
-                        <li>Git Version Control</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>English (Fluent)</li>
-                        <li>Italian (Fluent)</li>
-                        <li>German (Basic)</li>
-                        <li>French (Basic)</li>
-                    </ul>
+    <div class="container">
+        <header>
+            <img src="your-photo.jpg" alt="Jamal Mohammed" class="profile-photo">
+            <div class="header-content">
+                <h1>Jamal Mohammed</h1>
+                <p class="subtitle">Ph.D. in Computer Science, University of Zurich</p>
+                <div class="contact-info">
+                    <span>📧 <a href="mailto:mjamal@ifi.uzh.ch">mjamal@ifi.uzh.ch</a></span>
+                    <span>📱 +41 76 382 1490</span>
                 </div>
             </div>
-        </section>
-
-        <section id="research">
-            <h2>PhD Research & Projects</h2>
-
-            <div class="project-card">
-                <h3>Time Series Forecasting Platform</h3>
-                <span class="year">2024</span>
-                <p>
-                    Developed a comprehensive ML platform to quantify and benchmark the predictability limits of univariate time series data. The system implements state-of-the-art deep learning architectures including Transformers, N-BEATS, and N-HiTS, providing a rigorous framework for evaluating forecasting model performance against theoretical bounds.
-                </p>
-                <p>
-                    The platform enables researchers and practitioners to understand <em>what</em> can realistically be predicted from their time series data before investing in complex model development. By establishing information-theoretic upper bounds, organizations can make informed decisions about model selection and resource allocation.
-                </p>
-                <div class="impact">
-                    <strong>Impact:</strong> Improved forecasting accuracy on engineering datasets by 15% through optimal model selection and hyperparameter tuning guided by predictability bounds.
+        </header>
+        
+        <div class="summary">
+            <strong>Specialist Data Science & AI Engineering</strong><br>
+            Research Scientist & Machine Learning Engineer with a strong focus on time series analysis, streaming data, and ML systems. Combine top-tier research (ACM SIGKDD publication on predictability bounds) with hands-on engineering of end-to-end ML pipelines (data ingestion, model development, deployment, CI/CD, scalable data infrastructure). Experience with cloud-based streaming architectures (Kafka, Flink) and real-time anomaly detection from a master's capstone. Comfortable working in cross-functional, research-driven environments to design, build, and productionize data science and AI solutions.
+        </div>
+        
+        <div class="content">
+            <section id="education">
+                <h2>Education</h2>
+                
+                <div class="job-header">
+                    <h3>Ph.D. in Computer Science (Magna Cum Laude)</h3>
+                    <span class="job-date">Feb 2021 – Aug 2025</span>
                 </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Multi-Horizon Forecasting System</h3>
-                <span class="year">2025</span>
-                <p>
-                    Designed and implemented an end-to-end framework for multi-step time series forecasting that combines deep learning architectures with statistical models. The system addresses the challenging problem of predicting multiple future time steps simultaneously, which is critical for applications like energy demand forecasting, inventory management, and resource planning.
-                </p>
-                <p>
-                    The framework incorporates novel techniques for quantifying prediction uncertainty at different forecast horizons, enabling users to understand confidence levels for short-term versus long-term predictions. This multi-horizon approach provides actionable insights for decision-makers operating under different time constraints.
-                </p>
-                <div class="impact">
-                    <strong>Impact:</strong> Demonstrated superior performance in energy demand prediction tasks, outperforming baseline methods across multiple forecast horizons (1-day to 7-day ahead predictions).
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Efficient Subsequence Matching Tool</h3>
-                <span class="year">2025</span>
-                <p>
-                    Engineered high-performance algorithms for fast subsequence matching in large-scale time series data, enabling real-time pattern detection and anomaly identification in industrial systems. The tool implements optimized data structures and approximation techniques to achieve sub-linear search complexity for pattern matching queries.
-                </p>
-                <p>
-                    This system is particularly valuable for continuous monitoring applications where identifying recurring patterns or detecting anomalies must happen in real-time. The algorithms are designed to handle high-frequency data streams common in IoT sensor networks and industrial control systems.
-                </p>
-                <div class="impact">
-                    <strong>Impact:</strong> Enabled real-time anomaly detection for industrial monitoring systems, processing millions of data points per second with millisecond-level latency.
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Predictive Maintenance for Industrial Printers</h3>
-                <span class="year">2019-2020</span>
-                <p>
-                    Collaborated with Durst Phototechnik AG to develop and deploy ML-based predictive maintenance solutions for industrial printing systems. The project involved building end-to-end data pipelines from sensor data collection to model deployment in production environments.
-                </p>
-                <p>
-                    Developed deep learning models (LSTM-based architectures) for anomaly detection in multivariate time series sensor data streams. The system monitors multiple sensor readings simultaneously (temperature, pressure, vibration, ink flow) to detect early warning signs of equipment failure, enabling proactive maintenance scheduling.
-                </p>
-                <p>
-                    Worked closely with domain experts and engineers to translate research prototypes into production-ready solutions, including model optimization for edge deployment and integration with existing monitoring systems.
-                </p>
-                <div class="impact">
-                    <strong>Impact:</strong> Reduced unplanned downtime by 23% through early detection of equipment failures, resulting in significant cost savings and improved operational efficiency.
-                </div>
-            </div>
-
-            <div class="highlight-box">
-                <h3>Teaching & Mentorship</h3>
-                <p><strong>Teaching Assistant, Database Systems</strong> - University of Zurich (2021-2024)</p>
-                <ul style="margin-top: 1rem; margin-left: 1.5rem; color: var(--text-secondary);">
-                    <li style="margin-bottom: 0.5rem;">Led tutorials and lab sessions for 50+ students on database design, SQL optimization, and transaction management</li>
-                    <li style="margin-bottom: 0.5rem;">Designed comprehensive assignments covering relational algebra, query optimization, and distributed databases</li>
-                    <li style="margin-bottom: 0.5rem;">Supervised 3 M.Sc. theses on ML for sequential data analysis and optimization</li>
-                    <li>Supervised 2 B.Sc. theses on information-theoretic approaches for forecasting and anomaly detection</li>
+                <div class="company">University of Zurich, Switzerland</div>
+                <ul>
+                    <li>Dissertation: <em>"A Model-Agnostic Upper Bound for Univariate Time Series Prediction"</em></li>
+                    <li>Advisors: Prof. Michael H. Böhlen, Prof. Sven Helmer</li>
+                    <li>Research Focus: Predictability quantification, information-theoretic bounds, deep learning for time series, transformer architectures, scalable ML systems for large-scale forecasting and analysis</li>
                 </ul>
-            </div>
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-
-            <div class="publication">
-                <div class="authors">J. Mohammed, M. H. Böhlen, S. Helmer</div>
-                <div class="title">Quantifying and Estimating the Predictability Upper Bound of Univariate Numeric Time Series</div>
-                <div class="venue">Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD 2024)</div>
-                <div>DOI: 10.3390/e17042367</div>
-                <span class="status published">Published</span>
-            </div>
-
-            <div class="publication">
-                <div class="authors">J. Mohammed</div>
-                <div class="title">Multi-Horizon Predictability Upper Bound Time Series Forecasting</div>
-                <div class="venue">Submitted to AAAI Conference on Artificial Intelligence (AAAI 2026)</div>
-                <span class="status under-review">Under Review</span>
-            </div>
-
-            <div class="publication">
-                <div class="authors">J. Mohammed, M. H. Böhlen, S. Helmer</div>
-                <div class="title">Efficient Subsequence Matching in Time Series for Entropy Rate Estimation</div>
-                <div class="venue">IEEE Transactions on Knowledge and Data Engineering (TKDE)</div>
-                <span class="status in-preparation">In Preparation</span>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="icon">📧</div>
-                    <div>
-                        <strong>Email</strong><br>
-                        <a href="mailto:mjamal@ifi.uzh.ch">mjamal@ifi.uzh.ch</a>
+                
+                <div class="job-header">
+                    <h3>M.Sc. in Computer Science (110/110)</h3>
+                    <span class="job-date">Sept 2018 – Sept 2020</span>
+                </div>
+                <div class="company">Free University of Bolzano, Italy</div>
+                <ul>
+                    <li>Thesis: <em>"Advanced Deep Learning Approaches with Transfer Learning for Industrial Time Series Forecasting in Predictive Maintenance"</em></li>
+                    <li>Capstone project: Designed and implemented a <strong>cloud-based threshold-based anomaly detection system</strong> using <strong>Apache Kafka</strong> and <strong>Apache Flink</strong> (Java/Scala) for real-time processing and alerting on streaming sensor data</li>
+                </ul>
+                
+                <div class="job-header">
+                    <h3>B.Sc. in Computer Engineering</h3>
+                    <span class="job-date">Sept 2014 – Mar 2018</span>
+                </div>
+                <div class="company">Politecnico di Torino, Italy</div>
+            </section>
+            
+            <section id="research-impact">
+                <h2>PhD Research Impact</h2>
+                
+                <div class="impact-box">
+                    <h4>Model Selection & R&D Resource Allocation</h4>
+                    <p>Developed a predictability upper bound that provides a fundamental performance limit for time series forecasting tasks.</p>
+                    <ul>
+                        <li>Small gap between SOTA model performance and the bound: diminishing returns on additional model complexity and training</li>
+                        <li>Large gap: substantial potential for improvement, guiding where to invest R&D effort in model architecture and optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="impact-box">
+                    <h4>Data Quality & Process Diagnostics</h4>
+                    <p>Used the bound to disentangle intrinsic data noise from model inadequacy.</p>
+                    <ul>
+                        <li>Low bounds reveal highly unpredictable processes where gains come from better data collection, feature engineering, or process redesign</li>
+                        <li>High bounds with poor model performance point to model limitations, guiding architectural improvements and debugging</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="publications">
+                <h2>Publications</h2>
+                
+                <div class="publication">
+                    <div class="publication-title">J. Mohammed, M. H. Böhlen, S. Helmer (2024). "Quantifying and Estimating the Predictability Upper Bound of Univariate Numeric Time Series."</div>
+                    <div class="publication-venue">Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (SIGKDD 2024).</div>
+                </div>
+                
+                <div class="publication">
+                    <div class="publication-title">J. Mohammed (2025). "Multi-Horizon Predictability Upper Bound Time Series Forecasting."</div>
+                    <div class="publication-venue">In preparation, submitted to ICML 2026.</div>
+                </div>
+                
+                <div class="publication">
+                    <div class="publication-title">J. Mohammed, M. H. Böhlen, S. Helmer (2025). "Efficient Subsequence Matching in Time Series for Entropy Rate Estimation."</div>
+                    <div class="publication-venue">In preparation for IEEE TKDE.</div>
+                </div>
+            </section>
+            
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                
+                <div class="job-header">
+                    <div class="job-title">Doctoral Researcher – Machine Learning & Data Science</div>
+                    <span class="job-date">Feb 2021 – Aug 2025</span>
+                </div>
+                <div class="company">University of Zurich, Switzerland</div>
+                <ul>
+                    <li>Designed and implemented <strong>end-to-end ML pipelines</strong> for time series analysis: data ingestion, preprocessing/feature engineering, model training, evaluation, and reproducible experimentation</li>
+                    <li>Built <strong>scalable frameworks for heterogeneous data</strong> (sensor streams, static profiles, temporal measurements), enabling systematic benchmarking across datasets and tasks</li>
+                    <li>Implemented <strong>CI/CD practices for ML</strong>, including automated unit tests, training jobs, and evaluation pipelines, improving reproducibility and reducing manual overhead</li>
+                    <li>Designed and implemented state-of-the-art <strong>deep learning architectures</strong> (LSTM, N-BEATS, N-HITS, PatchTST, Transformers) for large-scale forecasting and anomaly detection</li>
+                    <li>Developed an <strong>open-source Python toolkit</strong> with modular pipeline components for predictability estimation, model benchmarking, and forecasting evaluation</li>
+                    <li>Optimized model training workflows using <strong>distributed computing and multi-GPU parallelization</strong> (CUDA, PyTorch), enabling efficient experimentation on large datasets</li>
+                    <li>Published research in a <strong>top-tier ML venue (ACM SIGKDD)</strong> and contributed to the theoretical foundations of time series predictability, bridging research insights with practical decisions on data collection and model design</li>
+                </ul>
+                
+                <div class="job-header">
+                    <div class="job-title">Data Engineering & ML System Deployment – Predictive Maintenance</div>
+                    <span class="job-date">Jun 2019 – Sept 2020</span>
+                </div>
+                <div class="company">Industrial Predictive Maintenance Service – Durst Phototechnik</div>
+                <ul>
+                    <li>Architected and deployed an <strong>end-to-end predictive maintenance pipeline</strong> for more than 50 industrial sensors in an on-premises environment, supporting 24/7 monitoring</li>
+                    <li>Designed <strong>time series data storage infrastructure</strong> using InfluxDB and TimescaleDB with optimized schemas for high-frequency sensor data and efficient aggregation/queries</li>
+                    <li>Implemented <strong>real-time streaming data pipelines</strong> with anomaly detection algorithms to identify equipment degradation and failures early</li>
+                    <li>Established <strong>automated CI/CD pipelines</strong> for data validation, model retraining, and deployment, reducing manual intervention and improving reliability</li>
+                    <li>Built <strong>ETL processes</strong> to integrate multi-source data (machinery sensors, maintenance logs, operational parameters), ensuring high-quality, analysis-ready datasets</li>
+                    <li>Developed <strong>interactive monitoring dashboards</strong> with real-time alerts and predictive maintenance recommendations for operations teams</li>
+                    <li>Collaborated closely with <strong>non-technical stakeholders at Durst Phototechnik</strong> (operations and maintenance teams) to understand requirements, interpret model outputs, and refine alerting thresholds and dashboards</li>
+                    <li>Achieved a <strong>23% reduction in unplanned system downtime</strong> through early failure detection and proactive maintenance scheduling</li>
+                </ul>
+                
+                <div class="job-header">
+                    <div class="job-title">Cloud & Streaming Data – Threshold-Based Anomaly Detection (Capstone)</div>
+                    <span class="job-date">2019 – 2020</span>
+                </div>
+                <div class="company">M.Sc. Capstone Project</div>
+                <ul>
+                    <li>Designed and implemented a <strong>cloud-based anomaly detection system</strong> for streaming sensor data using <strong>Apache Kafka</strong> and <strong>Apache Flink</strong> (Java, Scala)</li>
+                    <li>Developed <strong>threshold-based anomaly detection logic</strong> for real-time alerts on deviations in time series</li>
+                    <li>Deployed the streaming pipeline on a cloud environment, integrating producers/consumers and ensuring scalability and fault tolerance for continuous operation</li>
+                    <li>Exposed results via APIs and dashboards to support downstream monitoring and analysis</li>
+                </ul>
+                
+                <div class="job-header">
+                    <div class="job-title">Database Administration & Systems Design</div>
+                    <span class="job-date">Sept 2021 – Aug 2024</span>
+                </div>
+                <div class="company">University of Zurich – Database Systems Infrastructure</div>
+                <ul>
+                    <li>Administered a <strong>PostgreSQL database infrastructure</strong> supporting 300+ concurrent users in a database systems course</li>
+                    <li>Designed and implemented a <strong>secure multi-tenant authentication system</strong> with role-based access control for students and instructors</li>
+                    <li>Created schemas, indexing strategies, and performed <strong>query optimization</strong>, achieving up to <strong>10× speedup</strong> in critical operations</li>
+                    <li>Monitored and tuned database performance to ensure reliability and responsiveness</li>
+                    <li>Provided technical support on database connectivity, SQL debugging, and performance tuning for staff and students</li>
+                </ul>
+            </section>
+            
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Data Science, ML & AI</h4>
+                        <ul>
+                            <li>Data wrangling, EDA, statistical modeling</li>
+                            <li>Time series forecasting, anomaly detection</li>
+                            <li>Deep Learning: PyTorch, TensorFlow</li>
+                            <li>Transformers, LSTMs, N-BEATS, N-HITS, PatchTST</li>
+                            <li>Experimental design & benchmarking</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>MLOps & Software Engineering</h4>
+                        <ul>
+                            <li>CI/CD for ML: Jenkins, GitLab CI</li>
+                            <li>Docker, experiment tracking</li>
+                            <li>Git, GitHub (code reviews, PRs)</li>
+                            <li>Distributed & multi-GPU training (CUDA)</li>
+                            <li>Linux/Unix systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Data Engineering & Databases</h4>
+                        <ul>
+                            <li>ETL/ELT pipeline design</li>
+                            <li>Apache Kafka, Apache Flink (Java/Scala)</li>
+                            <li>InfluxDB, TimescaleDB</li>
+                            <li>PostgreSQL (admin, optimization)</li>
+                            <li>Real-time & batch processing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Programming & Tools</h4>
+                        <ul>
+                            <li>Python (PyTorch, NumPy, Pandas, Scikit-learn)</li>
+                            <li>Java, Scala, SQL, Bash, C, MATLAB</li>
+                            <li>Matplotlib, Seaborn, Plotly</li>
+                            <li>Jupyter, VS Code, LaTeX</li>
+                        </ul>
                     </div>
                 </div>
-
-
-                <div class="contact-item">
-                    <div class="icon">📍</div>
-                    <div>
-                        <strong>Location</strong><br>
-                        Zurich, Switzerland
-                    </div>
+            </section>
+            
+            <section id="teaching">
+                <h2>Teaching, Mentorship & Leadership</h2>
+                
+                <div class="job-header">
+                    <div class="job-title">Teaching Assistant – Database Systems</div>
+                    <span class="job-date">Sept 2021 – Aug 2024</span>
                 </div>
-            </div>
-
-            <div class="highlight-box" style="margin-top: 2rem;">
-                <h3>Open to Opportunities</h3>
-                <p>I'm actively seeking roles in <strong>Data Engineering</strong>, <strong>AI/ML Engineering</strong>, and <strong>Applied Research</strong> where I can leverage my expertise in time series analysis, database systems, and scalable ML infrastructure. Particularly interested in positions that combine technical depth with real-world impact in domains like fintech, industrial IoT, energy systems, or healthcare.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Jamal Mohammed. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">Ph.D. Computer Science (Magna Cum Laude) | University of Zurich</p>
-    </footer>
+                <div class="company">University of Zurich</div>
+                <ul>
+                    <li>Led weekly tutorials for <strong>150+ students</strong> on SQL, database design, query optimization, and transactions</li>
+                    <li>Designed assignments, exam questions, and practical exercises reflecting real-world data engineering and performance challenges</li>
+                    <li>Provided mentoring and guidance to students pursuing ML and data engineering roles, improving their practical skills and project quality</li>
+                </ul>
+                
+                <div class="job-header">
+                    <div class="job-title">Graduate Thesis Supervision</div>
+                    <span class="job-date">2022 – 2024</span>
+                </div>
+                <ul>
+                    <li>Supervised <strong>3 M.Sc. theses</strong> on machine learning for sequential data analysis and optimization algorithms</li>
+                    <li>Supervised <strong>2 B.Sc. theses</strong> on information-theoretic approaches for time series forecasting</li>
+                    <li>Mentored students on research methodology, experimental design, reproducible workflows, and scientific writing (conference/journal submissions)</li>
+                </ul>
+            </section>
+            
+            <section id="projects">
+                <h2>Open Source & Projects</h2>
+                
+                <h4>Time Series Predictability Toolkit (Open-Source)</h4>
+                <ul>
+                    <li>Python library for computing predictability bounds, benchmarking ML models, and evaluating forecasting performance</li>
+                    <li>Provides modular components (data loaders, models, evaluation metrics) for rapid experimentation and reproducibility</li>
+                </ul>
+                
+                <h4>Community Contributions</h4>
+                <ul>
+                    <li>Active contributor to ML and data engineering communities through code reviews, documentation improvements, and tutorial material</li>
+                </ul>
+            </section>
+            
+            <section id="awards">
+                <h2>Awards & Honors</h2>
+                
+                <div class="award">
+                    <strong>Ph.D. Degree (Magna Cum Laude)</strong> – University of Zurich, 2025
+                </div>
+                
+                <div class="award">
+                    <strong>M.Sc. Scholarship</strong> – Competitive scholarship for semester exchange program, Sept 2019
+                </div>
+            </section>
+            
+            <section id="professional-development">
+                <h2>Professional Development</h2>
+                
+                <ul>
+                    <li><strong>Communication & Collaboration:</strong> Presented research at international conferences and seminars; taught and mentored diverse student cohorts and collaborators</li>
+                    <li><strong>Cross-Functional Collaboration:</strong> Worked closely with industrial partners (e.g., Durst Phototechnik), academic researchers, and engineering teams to define requirements, interpret results, and deliver ML/AI solutions</li>
+                    <li><strong>Project Management:</strong> Managed multiple concurrent research and engineering projects from concept through implementation, evaluation, and publication/deployment</li>
+                </ul>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
